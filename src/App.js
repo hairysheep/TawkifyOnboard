@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import picture from './photo-1421986527537-888d998adb74.jpeg';
+import FileDrop from 'react-file-drop';
 
 
 
@@ -57,20 +58,20 @@ class App extends Component {
           <div className="Gender">
             <DropDown question = {"YOUR GENDER"} list = {['FEMALE', 'MALE']} subtext = {"Select your gender"}/>
           </div>
+          <div className="Seeking">
+            <DropDown question = {"YOU ARE SEEKING"} list = {['WOMEN', 'MEN']} subtext = {"Select the sexual orientation you're seeking"}/>
+          </div>
           <div className = "Location">
             <Loc/>
+          </div>
+          <div className="Birthday">
+            <Birth/>
           </div>
           <div className="Height">
             <DropDown question = {"YOUR HEGHT"} list = {heights} subtext = {"What is your height?"}/>
           </div>
           <div className="Occupation">
             <Textbox question = {"OCCUPATION"} subtext = {"What do you do?"}/>
-          </div>
-          <div className="Seeking">
-            <DropDown question = {"YOU ARE SEEKING"} list = {['WOMEN', 'MEN']} subtext = {"Select the sexual orientation you're seeking"}/>
-          </div>
-          <div className="Birthday">
-            <Birth/>
           </div>
           <div className="Income">
             <DropDown question = {"INCOME"} list = {incomes} subtext = {"Why? This is one form of an indicator."}/>
@@ -79,7 +80,7 @@ class App extends Component {
             <Textbox question = {"INTERESTS"} subtext = {"Tell us a little more about yourself and what you like to do. We read everything so please share"}/>
           </div>
           <div className="Continue">
-            <button onClick = {this.handleContClick}>SAVE AND CONTINUE</button>
+            <button className = "ContButton" onClick = {this.handleContClick}>SAVE AND CONTINUE</button>
           </div>
         </div>
       );
@@ -98,8 +99,11 @@ class App extends Component {
           <div className="page-descrip">
             <Description3/>
           </div>
+          <div>
+            <PhotoDrop/>
+          </div>
           <div className="Continue">
-            <button onClick = {this.handleContClick}>SAVE AND CONTINUE</button>
+            <button backgroundColor = "#00B9D7" onClick = {this.handleContClick}>SAVE AND CONTINUE</button>
           </div>
         </div>
       );
@@ -125,7 +129,7 @@ class Banner extends Component {
       <div>
         <p className ="Banner-text">
           We&apos;d like to get to know you better. Tell us about yourself and the sort of someone you&apos;d
-          <br/> like to meet. Don&apos;t worry no one will see this besides the matchmakers at Tawkify.
+           like to meet. Don&apos;t worry no one will see this besides the matchmakers at Tawkify.
         </p>
       </div>
     )
@@ -138,7 +142,7 @@ class Description1 extends Component {
       <div>
         <h1 className="Descrip-title">Tell us a bit about yourself</h1>
         <p className="Descrip-text">
-          Tell us a bit about yourself and who you&apos;d like to meet. The more we know, the better. Be candid-this <br/>
+          Tell us a bit about yourself and who you&apos;d like to meet. The more we know, the better. Be candid-this
           info is for our eyes only. Tawkify profiles and photos will forever be 100% confidential.
         </p>
       </div>
@@ -152,9 +156,9 @@ class Description3 extends Component {
       <div>
         <h1 className="Descrip-title">Upload recent photos of yourself</h1>
         <p className="Descrip-text">
-          We ask that you upload at least 2 pictures of yourself; but upload as many as you&apos;d like. We encourage <br/>
-          you to review your pictures periodically to make sure they are up to date. Snapshots and Selfies just<br/>
-          fine here. Remember this image is for our internal use and will nto be shared with potential matches -<br/>
+          We ask that you upload at least 2 pictures of yourself; but upload as many as you&apos;d like. We encourage
+          you to review your pictures periodically to make sure they are up to date. Snapshots and Selfies just
+          fine here. Remember this image is for our internal use and will nto be shared with potential matches -
           you will also be able to swap it out later if you wish.
         </p>
       </div>
@@ -319,6 +323,23 @@ class YesNo extends React.Component {
   }
 
 
+}
+
+class PhotoDrop extends React.Component {
+  handleDrop = (files,event) => {
+    console.log(files, event);
+  }
+
+  render() {
+    const styles = { border: '1px dashed black', width: 600, color: 'black', padding: 20};
+    return (
+      <div style={{styles}}>
+        <FileDrop onDrop={this.handleDrop}>
+          Drag and drop a photo
+        </FileDrop>
+      </div>
+    );
+  }
 }
 
 

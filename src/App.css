@@ -1,27 +1,29 @@
+@@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: semibold;
+  src:
+    local('ProximaNova Semibold'),
+    url(./fonts/ProximaNova/ProximaNova-Semibold.otf) format('opentype');
+}
+
+@@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: regular;
+  src:
+    local('ProximaNova Regular'),
+    url(./fonts/ProximaNova/ProximaNova-Regular.otf) format('opentype');
+}
+
 .App {
   text-align: center;
 }
 
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.page-header {
   color: white;
+  background-color: dimgrey;
 }
-
-.App-title {
-  position: absolute;
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.App-intro {
-  text-align: center;
-  font-size: large;
-}
-
-
 .page-banner {
   position: relative;
   text-align: center;
@@ -32,45 +34,28 @@
   text-align: center;
 }
 
+.Descrip-title {
+  font-size: 30px;
+}
+
+.Descrip-text {
+  font-size: 18px;
+}
+
 .DropDown-display {
   background-color: black;
 }
 
-.Gender {
+.Gender, .Location, .Height, .Occupation, .Seeking, .Birthday, .Income, .Interests {
   position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 200px;
   text-align: center;
   width: 400px;
+  display: inline-block;
 }
 
-.Location {
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 200px;
-  width: 400px;
-  text-align: center;
-}
-
-.Height {
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 200px;
-  width: 400px;
-  text-align: center;
-}
-
-.Occupation {
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 200px;
-  width: 400px;
-  text-align: center;
-}
 
 .Continue {
   position: relative;
