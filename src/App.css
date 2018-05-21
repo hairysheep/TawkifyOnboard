@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  position: absolute;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.App-intro {
+  text-align: center;
+  font-size: large;
+}
+
+
+.page-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.page-descrip {
+  text-align: center;
+}
+
+.DropDown-display {
+  background-color: black;
+}
+
+.Gender {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  text-align: center;
+  width: 400px;
+}
+
+.Location {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  width: 400px;
+  text-align: center;
+}
+
+.Height {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  width: 400px;
+  text-align: center;
+}
+
+.Occupation {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  width: 400px;
+  text-align: center;
+}
+
+.Continue {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+}
